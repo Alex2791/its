@@ -3,6 +3,7 @@
 namespace App\FrontEndBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
 
 class PageController extends Controller
 {
@@ -35,20 +36,24 @@ class PageController extends Controller
 
     public function paginAction(Request $request)
     {
-        $em    = $this->get('doctrine.orm.entity_manager');
+       // $em    = $this->get('doctrine.orm.entity_manager');
 
-        $query = $em->createQuery($dql);
+        //$query = $em->createQuery($dql);BundlesStoreBundle:ProdtoOrder
+        $em = $this->getDoctrine()->getManager();
+
+        $repo =$em->getRepository("BundlesStoreBundle:Page");
+        $query =$repo->findAll();
 
         $paginator  = $this->get('knp_paginator');
         $pagination = $paginator->paginate(
             $query,
             $request->query->getInt('page', 1)/*page number*/,
-            10/*limit per page*/
+            2/*limit per page*/
         );
 
         // parameters to template
       //  return $this->render('AcmeMainBundle:Article:list.html.twig', array('pagination' => $pagination));
-        return $this->render('AppFrontEndBundle:Page:index.html.twig');
+        return $this->render('AppFrontEndBundle:Page:page.html.twig', array('pagination' => $pagination));
     }
 
 
