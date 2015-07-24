@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "cb3bd9fa8c5b124a84669a8f4f1c0d9c",
+    "hash": "7bedce55c2676fa7671ea781aba10ef7",
     "packages": [
         {
             "name": "cocur/slugify",
@@ -2937,6 +2937,49 @@
             "time": "2015-06-06 23:31:24"
         },
         {
+            "name": "whiteoctober/breadcrumbs-bundle",
+            "version": "dev-master",
+            "target-dir": "WhiteOctober/BreadcrumbsBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/whiteoctober/BreadcrumbsBundle.git",
+                "reference": "68465cb75ea6ad5a04742ff10ec2f69ef09ff5b8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/whiteoctober/BreadcrumbsBundle/zipball/68465cb75ea6ad5a04742ff10ec2f69ef09ff5b8",
+                "reference": "68465cb75ea6ad5a04742ff10ec2f69ef09ff5b8",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2",
+                "symfony/framework-bundle": "2.*"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-0": {
+                    "WhiteOctober\\BreadcrumbsBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Rich Sage",
+                    "email": "rich.sage@gmail.com"
+                }
+            ],
+            "description": "A small breadcrumbs bundle for Symfony2",
+            "homepage": "https://github.com/whiteoctober/BreadcrumbsBundle",
+            "keywords": [
+                "breadcrumbs",
+                "symfony"
+            ],
+            "time": "2015-07-21 09:21:37"
+        },
+        {
             "name": "willdurand/jsonp-callback-validator",
             "version": "v1.1.0",
             "source": {
@@ -3030,7 +3073,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "sonata-project/core-bundle": 20
+        "sonata-project/core-bundle": 20,
+        "whiteoctober/breadcrumbs-bundle": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

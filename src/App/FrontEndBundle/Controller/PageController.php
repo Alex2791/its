@@ -57,6 +57,14 @@ class PageController extends Controller
     }
 
 
+    public function breadAction()
+    {
+        $router = $this->get('router');
+        $breadcrumbs = $this->get('white_october_breadcrumbs');
+        $breadcrumbs->addItem('Главная', $router->generate('app_front_end_wellcome'));
+        $breadcrumbs->addItem('Хлеб');
+        return $this->render('AppFrontEndBundle:Page:bread.html.twig');
 
+    }
 
 }

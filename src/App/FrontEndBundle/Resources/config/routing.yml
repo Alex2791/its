@@ -10,3 +10,6 @@ app_front_end_send:
 app_front_end_pag:
     path:     /pagin
     defaults: { _controller: AppFrontEndBundle:Page:pagin }
+app_front_end_bread:
+    path:     /bread
+    defaults: { _controller: AppFrontEndBundle:Page:bread }
