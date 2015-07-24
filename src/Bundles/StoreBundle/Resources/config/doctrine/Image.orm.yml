@@ -1,0 +1,19 @@
+Bundles\StoreBundle\Entity\Image:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        filename:
+            type: string
+            length: '100'
+        updated:
+            type: datetime
+            nullable:  true
+    lifecycleCallbacks:
+        prePersist:   [ lifecycleFileUpload ]
+        preUpdate:    [ lifecycleFileUpload ]

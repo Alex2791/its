@@ -1,0 +1,12 @@
+#app_front_end_homepage:
+    #path:     /hello/{name}
+    #defaults: { _controller: AppFrontEndBundle:Default:index }
+app_front_end_wellcome:
+    path:     /
+    defaults: { _controller: AppFrontEndBundle:Page:index }
+app_front_end_send:
+    path:     /send
+    defaults: { _controller: AppFrontEndBundle:Page:send }
+app_front_end_pag:
+    path:     /pagin
+    defaults: { _controller: AppFrontEndBundle:Page:pagin }

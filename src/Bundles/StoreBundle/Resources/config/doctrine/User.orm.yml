@@ -1,0 +1,15 @@
+Bundles\StoreBundle\Entity\User:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        fio:
+            type: string
+            length: 255
+            nullable: TRUE
+    lifecycleCallbacks: {  }
