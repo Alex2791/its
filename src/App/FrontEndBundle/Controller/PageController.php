@@ -4,6 +4,7 @@ namespace App\FrontEndBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 class PageController extends Controller
 {
@@ -12,6 +13,7 @@ class PageController extends Controller
         return $this->render('AppFrontEndBundle:Page:index.html.twig');
     }
 
+    //письмо
     public function sendAction()
     {
         $message = \Swift_Message::newInstance()
@@ -34,6 +36,7 @@ class PageController extends Controller
         return $this->render('AppFrontEndBundle:Page:index.html.twig');
     }
 
+    //пагинация
     public function paginAction(Request $request)
     {
        // $em    = $this->get('doctrine.orm.entity_manager');
@@ -56,7 +59,7 @@ class PageController extends Controller
         return $this->render('AppFrontEndBundle:Page:page.html.twig', array('pagination' => $pagination));
     }
 
-
+    //хлебные крошки
     public function breadAction()
     {
         $router = $this->get('router');
@@ -66,5 +69,23 @@ class PageController extends Controller
         return $this->render('AppFrontEndBundle:Page:bread.html.twig');
 
     }
+
+    //мультиязычность
+    public function multiAction(Request $request)
+    {
+
+       $request->setLocale("en");
+        $session = $request->getSession();
+
+        $session->set('_locale', $request->getLocale());
+        $t =  $this->get('translator');
+        dump($t);
+        $m = $request->getLocale();
+        dump($m);
+      // return new Response($t);
+       return $this->render('AppFrontEndBundle:Page:multi.html.twig');
+    }
+
+
 
 }

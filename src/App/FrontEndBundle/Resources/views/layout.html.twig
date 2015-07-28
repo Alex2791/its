@@ -1,9 +1,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     {% block head %}
-        <link rel="stylesheet" href="#" />
+
     {% endblock %}
-    {% block title 'Home page' %}
+
 </head>
 
 
@@ -21,7 +21,9 @@
     {% endblock %}
 
 </body>
-
+<script>
+    var pathajax="{{ path('app_front_end_ajax') }}";
+</script>
 {% block jscript %}
 
 {% endblock %}
