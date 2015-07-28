@@ -11,6 +11,7 @@ Bundles\StoreBundle\Entity\Image:
         filename:
             type: string
             length: '100'
+            nullable:  true
         updated:
             type: datetime
             nullable:  true
