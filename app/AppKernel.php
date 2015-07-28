@@ -38,6 +38,8 @@ class AppKernel extends Kernel
             new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
             new WhiteOctober\BreadcrumbsBundle\WhiteOctoberBreadcrumbsBundle(),
 
+            new Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle(),
+
 
 
 

@@ -74,14 +74,14 @@ class PageController extends Controller
     public function multiAction(Request $request)
     {
 
-       $request->setLocale("en");
+       /*$request->setLocale("ru");
         $session = $request->getSession();
 
         $session->set('_locale', $request->getLocale());
         $t =  $this->get('translator');
         dump($t);
         $m = $request->getLocale();
-        dump($m);
+        dump($m);*/
       // return new Response($t);
        return $this->render('AppFrontEndBundle:Page:multi.html.twig');
     }

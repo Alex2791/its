@@ -14,8 +14,10 @@ app_front_end_bread:
     path:     /bread
     defaults: { _controller: AppFrontEndBundle:Page:bread }
 app_front_end_multi:
-    path:     /multi
-    defaults: { _controller: AppFrontEndBundle:Page:multi }
+    path:     /multi/{_locale}
+    defaults:
+        _controller: AppFrontEndBundle:Page:multi
+        #_locale:     %locale%
 app_front_end_ajax:
     path:     /ajax
     defaults: { _controller: AppFrontEndBundle:Ajax:index }
