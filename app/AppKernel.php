@@ -40,6 +40,12 @@ class AppKernel extends Kernel
 
             new Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle(),
 
+            new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
+            /* new Symfony\Cmf\Bundle\TreeBrowserBundle\CmfTreeBrowserBundle(),*/
+
+
+           // new Avanzu\AdminThemeBundle\AvanzuAdminThemeBundle(),
+
 
 
 

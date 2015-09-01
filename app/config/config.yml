@@ -93,6 +93,23 @@ sonata_block:
         sonata.user.block.menu:  # used to display the menu in profile pages
         sonata.user.block.account: # used to display menu option (login option)
         sonata.block.service.text: # used to if you plan to use Sonata user routes
+        sonata_admin_doctrine_phpcr.tree_block:
+                    settings:
+                        id: '/cms'
+                    contexts: [admin]
+
+sonata_admin:
+    dashboard:
+        blocks:
+          #  - { position: left, type: sonata_admin_doctrine_phpcr.tree_block }
+           - { position: left, type: sonata.admin.block.admin_list }
+    title: Super - Admin
+    security:
+        handler: sonata.admin.security.handler.role
+    templates:
+        layout: AppBackEndBundle:Admin:standard_layout.html.twig
+
+
 fos_user:
   db_driver:  orm # can be orm or odm
   firewall_name:  main
@@ -108,6 +125,10 @@ knp_paginator:
     template:
         pagination: KnpPaginatorBundle:Pagination:sliding.html.twig     # sliding pagination controls template
         sortable: KnpPaginatorBundle:Pagination:sortable_link.html.twig # sort link template
+
+#avanzu_admin_theme:
+     # bower_bin: /usr/local/bin/bower # that's the default value
+
 white_october_breadcrumbs: ~
 
 

@@ -1,0 +1,13 @@
+body {
+    color: #000;
+}
+
+
+.skin-black .logo, .skin-black .left-side {
+    background-color: #000;
+}
+
+
+.sidebar ul, .sidebar li {
+    padding-top:20px;
+}

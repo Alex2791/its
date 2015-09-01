@@ -21,3 +21,10 @@ app_front_end_multi:
 app_front_end_ajax:
     path:     /ajax
     defaults: { _controller: AppFrontEndBundle:Ajax:index }
+app_front_end_test:
+    path:  /test
+    defaults: { _controller: AppFrontEndBundle:Page:test}
+
+app_front_end_autocomplite:
+    path:  /autocomplite
+    defaults: { _controller: AppFrontEndBundle:Page:autocomplite}
