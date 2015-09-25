@@ -106,6 +106,10 @@ class PageController extends Controller
         return $this->render('AppFrontEndBundle:Page:autocomplite.html.twig');
     }
 
+    public function dragAndDropAction()
+    {
+       return $this->render('AppFrontEndBundle:Page:draganddrop.html.twig');
+    }
 
 
 }

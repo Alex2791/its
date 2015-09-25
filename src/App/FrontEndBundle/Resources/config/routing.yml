@@ -28,3 +28,6 @@ app_front_end_test:
 app_front_end_autocomplite:
     path:  /autocomplite
     defaults: { _controller: AppFrontEndBundle:Page:autocomplite}
+app_front_end_draganddrop:
+    path:  /draganddrop
+    defaults: { _controller: AppFrontEndBundle:Page:dragAndDrop}

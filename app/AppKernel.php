@@ -16,13 +16,11 @@ class AppKernel extends Kernel
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
+
             new Bundles\StoreBundle\BundlesStoreBundle(),
+
             new App\BackEndBundle\AppBackEndBundle(),
             new App\FrontEndBundle\AppFrontEndBundle(),
-
-
-           // new Sonata\jQueryBundle\SonatajQueryBundle(),
-
 
             new Sonata\CoreBundle\SonataCoreBundle(),
             new Sonata\BlockBundle\SonataBlockBundle(),
@@ -30,10 +28,7 @@ class AppKernel extends Kernel
             new Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle(),
             new Sonata\AdminBundle\SonataAdminBundle(),
 
-           /* new Sonata\EasyExtendsBundle\SonataEasyExtendsBundle(),
-            new FOS\UserBundle\FOSUserBundle(),*/
-            //new Sonata\UserBundle\SonataUserBundle('FOSUserBundle'),
-            //new Sonata\UserBundle\SonataUserBundle(),
+
             new FOS\UserBundle\FOSUserBundle(),
             new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
             new WhiteOctober\BreadcrumbsBundle\WhiteOctoberBreadcrumbsBundle(),
@@ -41,14 +36,6 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle(),
 
             new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
-            /* new Symfony\Cmf\Bundle\TreeBrowserBundle\CmfTreeBrowserBundle(),*/
-
-
-           // new Avanzu\AdminThemeBundle\AvanzuAdminThemeBundle(),
-
-
-
-
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
